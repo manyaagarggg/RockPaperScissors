@@ -21,5 +21,25 @@
         calculateTotal();
     " class="calcukate-button"> Calculate</button>
     <p class="js-total-cost"></p>
+
+    <script>
+        String(25)
+        console.log('25'-5);
+
+        function handleCostKeydown(event){
+            if(event.key==='Enter'){
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal(){
+            const inputELement= document.querySelector('.js-cost-input');
+            let cost= Number(inputELement.value);
+            if(cost <40){
+                cost=cost + 10;
+            }
+            document.querySelector('.js-total-cost').innerHTML= `$${cost}`;
+        }
+    </script>
 </body>
 </html>
