@@ -6,6 +6,9 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
 updateScoreElement();
 
+let isAutoPlaying = false;
+let intervalId;
+
 
 function autoPlay() {
     if (!isAutoPlaying) {
@@ -57,7 +60,7 @@ function playGame(playerMove){
         if(computerMove ==='rock'){
             result = 'You lose.';
         } else if(computerMove==='paper'){
-            result = 'You wins.';
+            result = 'You win.';
         } else if(computerMove==='scissors'){
             result='Tie.';
         }
@@ -67,11 +70,11 @@ function playGame(playerMove){
         } else if(computerMove==='paper'){
             result = 'You lose.';
         } else if(computerMove==='scissors'){
-            result='You wins.';
+            result='You win.';
         }
     } else if(playerMove === 'paper'){
         if(computerMove ==='rock'){
-            result = 'You wins.';
+            result = 'You win.';
         } else if(computerMove==='paper'){
             result = 'Tie.';
         } else if(computerMove==='scissors'){
@@ -79,7 +82,7 @@ function playGame(playerMove){
         }
     } 
 
-    if(result==='You wins'){
+    if(result==='You win'){
         score.wins +=1;
     } else if(result=== 'You lose'){
         score.losses +=1;
