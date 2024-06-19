@@ -78,13 +78,13 @@ function playGame(playerMove){
         } else if(computerMove==='paper'){
             result = 'Tie.';
         } else if(computerMove==='scissors'){
-            result='You lose';
+            result='You lose.';
         }
     } 
 
-    if(result==='You win'){
+    if(result==='You win.'){
         score.wins +=1;
-    } else if(result=== 'You lose'){
+    } else if(result=== 'You lose.'){
         score.losses +=1;
     } else if(result==='Tie.'){
         score.ties +=1;
