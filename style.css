@@ -34,14 +34,14 @@ body{
     font-size: 25px;
     font-weight: bold;
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 550px;
 }
 
 .score{
     border: 3px solid beige;
     width:370px;
     margin-top: 60px;
-    margin-left: 200px;
+    margin-left: 550px;
     /* text-align: center; */
 }
 
